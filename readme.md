@@ -1,1 +1,34 @@
-commit 1 : to test git commit, github refused to commit because of existing files in the repository, hence "git push -u origin main" failed, since the repo was new and the files were unnecessary, used force push i.e., "git push -u origin main --force"
+# Task Tracker CLI
+
+A simple command-line task tracker built with Node.js.
+
+## Features
+
+- Add tasks
+- Update tasks
+- Delete tasks
+- Mark tasks as completed
+- List all tasks
+
+## Installation
+
+```bash
+git clone https://github.com/lancelord6/task_tracker.git
+cd task_tracker
+npm install
+```
+
+## Usage
+
+```bash
+node index.js add "Learn Git"
+node index.js list
+node index.js update 1 "Learn Express.js"
+node index.js delete 1
+```
+
+## Technologies
+
+- JavaScript
+- Node.js
+- File System (fs)
