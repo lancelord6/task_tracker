@@ -1,0 +1,1 @@
+commit 1 : to test git commit, github refused to commit because of existing files in the repository, hence "git push -u origin main" failed, since the repo was new and the files were unnecessary, used force push i.e., "git push -u origin main --force"
