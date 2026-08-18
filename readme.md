@@ -36,6 +36,8 @@ Now you can run the following on any terminal window :
 task_tracker add "Learn Git"
 task_tracker list
 task_tracker update 1 "Learn Express.js"
+task_tracker mark-in-progress 1
+task_tracker mark-done 1
 task_tracker delete 1
 ```
 
