@@ -10,17 +10,25 @@ A simple command-line task tracker built with Node.js.
 - Mark tasks as completed
 - List all tasks
 
+## Prerequisites
+
+This tool runs on Node.js. If you don't have it installed, you will need to do that first.
+
+1. Download and install [Node.js](https://nodejs.org/) (this automatically installs `npm` for you).
+2. Verify the installation by opening your terminal and running:
+   ```bash
+   node -v
+   npm -v
+
 ## Installation
 
 ```bash
 git clone https://github.com/lancelord6/task_tracker.git
 cd task_tracker
 npm install
-```
-navigate to the installation directory and run :
-```bash
 npm link
 ```
+
 
 ## Usage
 Now you can run the following on any terminal window :
