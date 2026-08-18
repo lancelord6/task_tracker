@@ -1,6 +1,7 @@
 # Task Tracker CLI
 
-A simple command-line task tracker built with Node.js.
+A simple command-line task tracker built with Node.js.  
+Sample solution from [roadmap.sh](https://roadmap.sh/) : [task-tracker](https://roadmap.sh/projects/task-tracker)
 
 ## Features
 
