@@ -1,16 +1,1 @@
-[
-  {
-    "id": 1,
-    "description": "npm",
-    "status": "to-do",
-    "createdAT": "2026-08-18T11:23:38.770Z",
-    "updatedAt": "2026-08-18T11:23:38.770Z"
-  },
-  {
-    "id": 2,
-    "description": "blue",
-    "status": "to-do",
-    "createdAT": "2026-08-18T11:30:29.586Z",
-    "updatedAt": "2026-08-18T11:30:29.586Z"
-  }
-]
+[]

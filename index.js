@@ -96,13 +96,13 @@ else if(command==="update")
     }
     else
     {
-        const task=tasks.find(task=> task.id==args[1]);
+        const task=tasks.find(task=> task.id==(args[1]-1));
         if(!task)
             console.log("Task not found");
 
         else
         {
-            task.descriptiom=args[2];
+            task.description=args[2];
             savetasks(tasks);
             console.log('task updated');
         }
@@ -117,7 +117,7 @@ else if(command==='delete')
     }
     else
     {
-        const newtasks=tasks.filter(task=> task.id!=(args[1]-1));
+        const newtasks=tasks.filter(task=> task.id!=args[1]);
         reorder(newtasks);
         if(tasks.length===newtasks.length)
             console.log('No tasks with such id found');
