@@ -17,14 +17,18 @@ git clone https://github.com/lancelord6/task_tracker.git
 cd task_tracker
 npm install
 ```
+navigate to the installation directory and run :
+```bash
+npm link
+```
 
 ## Usage
-
+Now you can run the following on any terminal window :
 ```bash
-node index.js add "Learn Git"
-node index.js list
-node index.js update 1 "Learn Express.js"
-node index.js delete 1
+task_tracker add "Learn Git"
+task_tracker list
+task_tracker update 1 "Learn Express.js"
+task_tracker delete 1
 ```
 
 ## Technologies
