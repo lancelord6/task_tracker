@@ -1,0 +1,24 @@
+{
+  "name": "task_tracker",
+  "version": "1.0.0",
+  "description": "commit 1 : to test git commit, github refused to commit because of existing files in the repository, hence \"git push -u origin main\" failed, since the repo was new and the files were unnecessary, used force push i.e., \"git push -u origin main --force\"",
+  "main": "index.js",
+  "bin":{
+    "task_tracker":"./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lancelord6/task_tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lancelord6/task_tracker/issues"
+  },
+  "homepage": "https://github.com/lancelord6/task_tracker#readme"
+}

@@ -1,7 +1,9 @@
+#!/usr/bin/env node
 const fs=require('fs');
 const path=require('path');
 
 const filepath=path.join(__dirname,'task.json');
+
 
 function loadtasks()
 {
@@ -17,6 +19,14 @@ function savetasks(tasks)
     fs.writeFileSync(filepath, JSON.stringify(tasks, null, 2), 'utf8');
 }
 
+function reorder(tasks)
+{
+    let i=1;
+    tasks.forEach(task=>{
+        task.id=i;
+        i++;
+    });
+}
 const args=process.argv.slice(2);
 const command=args[0];
 
@@ -46,7 +56,7 @@ if(command==='add')
     tasks.push(newTask);
     savetasks(tasks);
 
-    console.log(`Task added successfullt(ID : ${newID}`);
+    console.log(`Task added successfullt(ID : ${newID})`);
 }
 else if(command==='list')
 {
@@ -55,8 +65,23 @@ else if(command==='list')
     {
         console.log('No tasks found');
     }
+    else if(args[1]==="done" || args[1]==="todo" || args[1]==="in-progress")
+    {
+        const cmd=args[1];
+        reorder(tasks);
+        tasks.forEach(task=>{
+            if(task.status===cmd)
+            {  
+                console.log(`${task.id} ${task.description}`);
+                cmd=0;
+            }
+        });
+        if(cmd!=0)
+            console.log("No element with such status found");
+    }
     else
     {
+        reorder(tasks);
         tasks.forEach(task=>{
             console.log(`[${task.id} ${task.description} - Status : ${task.status}]`);
         });
@@ -85,15 +110,16 @@ else if(command==="update")
 }
 else if(command==='delete')
 {
-    const tasks=loadTasks();
+    const tasks=loadtasks();
     if(tasks.length===0)
     {
         console.log('No tasks found');
     }
     else
     {
-        const newtasks=tasks.filter(tasks=> tasks.id!=args[1]);
-        if(tasks.length()===newtasks.length())
+        const newtasks=tasks.filter(task=> task.id!=(args[1]-1));
+        reorder(newtasks);
+        if(tasks.length===newtasks.length)
             console.log('No tasks with such id found');
         else
         {
